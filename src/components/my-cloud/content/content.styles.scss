@@ -14,9 +14,10 @@
     width: 100%;
     position: sticky;
     top: 0;
+    border-radius: 40px 40px 0 0;
   }
-  
-  .content-grid{
+
+  .content-grid {
     padding: 25px;
     display: grid;
     grid-template-columns: repeat(2, auto);
