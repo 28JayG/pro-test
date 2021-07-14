@@ -26,11 +26,7 @@ const UploadCurve = ({ onClose, open }) => {
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
-  }, [open]);
-
-  const numberOfOptions = 3;
-  //total availabe angle 180 deg
-  const minimumOptionAngle = 180 / numberOfOptions;
+  }, []);
 
   return (
     <div className='uc-bg'>

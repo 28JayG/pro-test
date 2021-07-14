@@ -3,6 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 import { InternalRoutes } from './constants/routes';
 import LocalStorage from './pages/local-storage/local-storage.component';
 import MyCloud from './pages/my-cloud/my-cloud.component';
+import Notifications from './pages/notifications/notifications.component';
 import OnBoarding from './pages/onboarding/onboarding.component';
 import Profile from './pages/profile/profile.component';
 import StorageManagement from './pages/storage-management/storage-management.component';
@@ -19,6 +20,7 @@ function App() {
         />
         <Route exact path={InternalRoutes.PROFILE} component={Profile} />
         <Route path={InternalRoutes.LOCAL_STORAGE} component={LocalStorage} />
+        <Route path={InternalRoutes.NOTIFICATIONS} component={Notifications} />
       </Switch>
     </>
   );

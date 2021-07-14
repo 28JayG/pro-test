@@ -1,17 +1,17 @@
 import { IconCloud, IconDatabase, IconBell, IconUser } from '@tabler/icons';
 
 export const InternalRoutes = {
-  HOME:'/',
+  HOME: '/',
   MY_CLOUD: '/my-cloud',
   LOCAL_STORAGE: '/local-storage',
   NOTIFICATIONS: '/notifications',
   PROFILE: '/profile',
-  STORAGE_MANAGEMENT: '/profile/storage-management'
+  STORAGE_MANAGEMENT: '/profile/storage-management',
 };
 
 const navLinkStyles = {
   strokeOpacity: 0,
-  fill: true,
+  fill: ''
 };
 
 export const bottomNavRoutes = {
