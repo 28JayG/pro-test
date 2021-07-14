@@ -1,10 +1,10 @@
-import SquareButton from '../../../common/square-button/square-button.component';
+import SquareButton from '../square-button/square-button.component';
 import { IconArrowUp } from '@tabler/icons';
-import { AppColors } from '../../../../constants/colors';
+import { AppColors } from '../../../constants/colors';
 
 import './storage-indicator.styles.scss';
 
-const StorageIndicator = ({ showUpgradeButton }) => {
+const StorageIndicator = ({ upgradeButton, increaseStorageButton, isHome }) => {
   const usedStorageInGB = 76.7;
   const totalStorageInGB = 100;
 
@@ -14,16 +14,18 @@ const StorageIndicator = ({ showUpgradeButton }) => {
 
   return (
     <div className='storage-indicator'>
-      <div className='si-row'>
+      <div className={`si-row ${isHome ? 'home' : ''}`}>
         <h3>
           <strong>{leftStorageInGB} GB</strong> of {totalStorageInGB} GB free
         </h3>
-        <SquareButton
-          color={AppColors.home_blue}
-          backgroundColor={AppColors.pink}
-        >
-          <IconArrowUp />
-        </SquareButton>
+        {upgradeButton && (
+          <SquareButton
+            color={AppColors.home_blue}
+            backgroundColor={AppColors.pink}
+          >
+            <IconArrowUp />
+          </SquareButton>
+        )}
       </div>
 
       <div className='indicator-track'>
@@ -32,6 +34,7 @@ const StorageIndicator = ({ showUpgradeButton }) => {
           style={{ width: `${usedPercentage}%` }}
         />
       </div>
+      {increaseStorageButton && <button className='increase-storge'>Increase storage space</button>}
     </div>
   );
 };

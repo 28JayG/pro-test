@@ -1,30 +1,40 @@
-@import '../../../../styles/colors.styles.scss';
+@import '../../../styles/colors.styles.scss';
 
 .storage-indicator {
   font-weight: 600;
-  color: rgba($color: white, $alpha: 0.5);
+  color: $disabled_gray;
   margin-bottom: 60px;
-  
+
   strong {
     font-size: 24px;
-    color: rgba($color: white, $alpha: 1);
+    color: $text_blue;
   }
-  
+
+  & .home {
+    color: rgba($color: white, $alpha: 0.5);
+
+    strong {
+      color: rgba($color: white, $alpha: 1);
+    }
+  }
+
   .si-row {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin: 15px 0;
   }
-  
+
   .indicator-track {
     width: 100%;
     height: 6px;
     background-color: rgba($color: #000000, $alpha: 0.15);
     position: relative;
+    border-radius: 5px;
 
     .indicator-value {
       height: 100%;
+      border-radius: inherit;
       background-color: $pink;
       animation: increase 1s ease-out;
 
@@ -34,5 +44,18 @@
         }
       }
     }
+  }
+
+  .increase-storge {
+    height: 48px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: transparent;
+    border: $pink solid 2px;
+    border-radius: 22px;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 25px 0;
+    color: $pink;
   }
 }

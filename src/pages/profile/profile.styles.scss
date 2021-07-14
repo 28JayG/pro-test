@@ -1,0 +1,19 @@
+@import '../../styles/colors.styles.scss';
+
+.profile-header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 25px;
+    color: $text_blue;
+    
+    .profile-heading{
+        font-size: 34px;
+        font-weight: 600;
+    }
+
+    .profile-edit{
+        font-size: 18px;
+    }
+}

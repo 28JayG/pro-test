@@ -3,6 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 import { InternalRoutes } from './constants/routes';
 import MyCloud from './pages/my-cloud/my-cloud.component';
 import OnBoarding from './pages/onboarding/onboarding.component';
+import Profile from './pages/profile/profile.component';
 import StorageManagement from './pages/storage-management/storage-management.component';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         path={InternalRoutes.STORAGE_MANAGEMENT}
         component={StorageManagement}
       />
+      <Route exact path={InternalRoutes.PROFILE} component={Profile} />
     </Switch>
   );
 }
