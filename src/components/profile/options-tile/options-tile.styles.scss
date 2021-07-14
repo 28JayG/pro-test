@@ -1,0 +1,73 @@
+@import '../../../styles/colors.styles.scss';
+
+.options-tile {
+  width: 100%;
+  min-height: 60px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 7px;
+  background-color: #f5f7fc;
+  margin-bottom: 15px;
+
+  .ot-title {
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .ot-col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .ot-subtitle {
+    margin-top: 2px;
+    font-size: 14px;
+    font-weight: 500;
+    color: $disabled_gray;
+  }
+
+  .ot-right-arrow {
+    font-size: 14px;
+    color: $disabled_gray;
+  }
+
+  .ot-switch {
+    display: flex;
+    justify-content: flex-start;
+    width: 53px;
+    height: 30px;
+    padding: 4px;
+    background-color: $disabled_gray;
+    border-radius: 16px;
+    position: relative;
+    transition: all 100ms linear;
+
+    .toggle {
+      position: absolute;
+      transform: translateY(-50%);
+      top: 50%;
+      background-color: white;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      transition: all 100ms linear;
+
+      &.inactive{
+        left: 4px;
+      }
+
+      &.active{
+        left: calc(53px - 22px - 4px);
+      }
+    }
+
+    &.active {
+      background-color: $nav_link_active;
+      justify-content: flex-end;
+    }
+  }
+}
