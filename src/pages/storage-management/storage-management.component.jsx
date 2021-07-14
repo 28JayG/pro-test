@@ -5,11 +5,14 @@ import UsageDetails from '../../components/storage-management/usage-details/usea
 
 import './storage-management.styles.scss';
 
-const StorageManagement = () => {
+const StorageManagement = ({ history }) => {
   return (
     <MainLayout isSubPage>
       <div className='sm-header'>
-        <IconArrowNarrowLeft className='back' />
+        <IconArrowNarrowLeft
+          className='back'
+          onClick={() => history.goBack()}
+        />
         <h4 className='sm-heading'>Storage Management</h4>
       </div>
       <StoragePie />
