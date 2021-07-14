@@ -1,6 +1,6 @@
 import './tab.styles.scss';
 
-const ContentTab = ({ active, heading, ...otherTabProps }) => {
+const Tab = ({ active, heading, ...otherTabProps }) => {
   return (
     <div className='ct-tab' {...otherTabProps}>
       <p className={`ct-heading ${active ? 'active' : ''}`}>{heading}</p>
@@ -9,4 +9,4 @@ const ContentTab = ({ active, heading, ...otherTabProps }) => {
   );
 };
 
-export default ContentTab;
+export default Tab;

@@ -15,3 +15,16 @@ $chart-width: 250px;
     color: $text_blue;
   }
 }
+
+
+.sp-legend-wrapper {
+  display: flex;
+  overflow: auto;
+  white-space: nowrap;
+  align-items: center;
+  padding-left: 25px;
+
+  &::-webkit-scrollbar{
+    display: none;
+  }
+}
