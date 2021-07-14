@@ -6,6 +6,7 @@ export const InternalRoutes = {
   LOCAL_STORAGE: '/local-storage',
   NOTIFICATIONS: '/notifications',
   PROFILE: '/profile',
+  STORAGE_MANAGEMENT: '/profile/storage-management'
 };
 
 const navLinkStyles = {

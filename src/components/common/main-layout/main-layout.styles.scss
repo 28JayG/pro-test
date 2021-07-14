@@ -7,6 +7,10 @@
   position: relative;
   padding-top: calc(#{$status-bar-height} + 18px);
 
+  &.subpage {
+    padding-top: calc(#{$status-bar-height-min} + 14px);
+  }
+
   &.home {
     background-color: $home_blue;
   }

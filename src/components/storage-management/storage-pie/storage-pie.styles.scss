@@ -1,0 +1,17 @@
+@import '../../../styles/colors.styles.scss';
+$chart-width: 250px;
+
+.sp-chart {
+  position: relative;
+  width: $chart-width;
+  height: $chart-width;
+  margin: 25px auto;
+
+  .sp-used {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 52%;
+    left: 50%;
+    color: $text_blue;
+  }
+}

@@ -1,10 +1,10 @@
 import SquareButton from '../../../common/square-button/square-button.component';
-import { IconArrowNarrowUp } from '@tabler/icons';
+import { IconArrowUp } from '@tabler/icons';
 import { AppColors } from '../../../../constants/colors';
 
 import './storage-indicator.styles.scss';
 
-const StorageIndicator = () => {
+const StorageIndicator = ({ showUpgradeButton }) => {
   const usedStorageInGB = 76.7;
   const totalStorageInGB = 100;
 
@@ -22,7 +22,7 @@ const StorageIndicator = () => {
           color={AppColors.home_blue}
           backgroundColor={AppColors.pink}
         >
-          <IconArrowNarrowUp />
+          <IconArrowUp />
         </SquareButton>
       </div>
 
