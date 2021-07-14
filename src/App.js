@@ -9,16 +9,18 @@ import StorageManagement from './pages/storage-management/storage-management.com
 
 function App() {
   return (
-    <Switch>
-      <Route path={InternalRoutes.HOME} exact component={OnBoarding} />
-      <Route path={InternalRoutes.MY_CLOUD} component={MyCloud} />
-      <Route
-        path={InternalRoutes.STORAGE_MANAGEMENT}
-        component={StorageManagement}
-      />
-      <Route exact path={InternalRoutes.PROFILE} component={Profile} />
-      <Route path={InternalRoutes.LOCAL_STORAGE} component={LocalStorage} />
-    </Switch>
+    <>
+      <Switch>
+        <Route path={InternalRoutes.HOME} exact component={OnBoarding} />
+        <Route path={InternalRoutes.MY_CLOUD} component={MyCloud} />
+        <Route
+          path={InternalRoutes.STORAGE_MANAGEMENT}
+          component={StorageManagement}
+        />
+        <Route exact path={InternalRoutes.PROFILE} component={Profile} />
+        <Route path={InternalRoutes.LOCAL_STORAGE} component={LocalStorage} />
+      </Switch>
+    </>
   );
 }
 

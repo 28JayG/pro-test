@@ -8,7 +8,7 @@ const File = ({ showTimesUsed, fileType }) => {
       <FileIcon
         icon={fileType.icon(18)}
         title={fileType.title}
-        size='lg'
+        size='md'
         color={fileType.color()}
         backgroundColor={fileType.color(0.2)}
       />

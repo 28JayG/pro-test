@@ -24,7 +24,7 @@ const FileIcon = ({
           {icon}
         </div>
       </div>
-      <p className='fi-title'>{title}</p>
+     {title && <p className='fi-title'>{title}</p>}
     </div>
   );
 };
