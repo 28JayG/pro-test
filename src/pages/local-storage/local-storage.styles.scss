@@ -1,0 +1,15 @@
+@import '../../styles/colors.styles.scss';
+
+.ls-header {
+  padding: 0 25px;
+
+  h3 {
+    font-size: 34px;
+    font-weight: 600;
+    color: $text_blue;
+  }
+}
+
+.ls-body{
+    padding: 25px;
+}

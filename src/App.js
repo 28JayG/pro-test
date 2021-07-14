@@ -1,6 +1,7 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { InternalRoutes } from './constants/routes';
+import LocalStorage from './pages/local-storage/local-storage.component';
 import MyCloud from './pages/my-cloud/my-cloud.component';
 import OnBoarding from './pages/onboarding/onboarding.component';
 import Profile from './pages/profile/profile.component';
@@ -16,6 +17,7 @@ function App() {
         component={StorageManagement}
       />
       <Route exact path={InternalRoutes.PROFILE} component={Profile} />
+      <Route path={InternalRoutes.LOCAL_STORAGE} component={LocalStorage} />
     </Switch>
   );
 }

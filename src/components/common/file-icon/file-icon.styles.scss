@@ -1,0 +1,62 @@
+@import '../../../styles/colors.styles.scss';
+
+$bg_size_lg: 72px;
+$bg_size_md: 52px;
+
+$icon_size_lg: 28px;
+$icon_size_md: 18px;
+
+.fi-container {
+  margin-right: 25px;
+
+  &.inline {
+    display: inline-block;
+  }
+
+  .fi-bg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.lg {
+      width: $bg_size_lg;
+      height: $bg_size_lg;
+      border-radius: 24px;
+    }
+    &.md {
+      width: $bg_size_md;
+      height: $bg_size_md;
+      border-radius: 22px;
+    }
+
+    .file-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &.lg {
+        width: $icon_size_lg;
+        height: $icon_size_lg;
+        font-size: 12px;
+        border-radius: 10px;
+      }
+
+      &.md {
+        width: $icon_size_md;
+        height: $icon_size_md;
+        font-size: 12px;
+        border-radius: 6px;
+      }
+    }
+  }
+
+  .fi-title {
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 9px;
+    width: 100%;
+    color: $disabled_gray;
+    text-align: center;
+    text-transform: capitalize;
+  }
+}
