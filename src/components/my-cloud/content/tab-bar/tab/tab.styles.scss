@@ -1,0 +1,30 @@
+@import '../../../../../styles/colors.styles.scss';
+
+.ct-tab {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 120px;
+  height: 34px;
+  color: $disabled_gray;
+  font-size: 13px;
+
+  .ct-heading {
+    text-transform: uppercase;
+
+    &.active {
+      color: $nav_link_active;
+    }
+  }
+
+  .ctt-indicator {
+    height: 4px;
+    width: 100%;
+    border-radius: 25px 25px 0px 0px;
+    
+    &.active {
+      background-color: $nav_link_active;
+    }
+  }
+}

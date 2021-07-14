@@ -1,0 +1,14 @@
+$thumb-size: 28px;
+
+.shr-thumb {
+  width: $thumb-size;
+  height: $thumb-size;
+  border-radius: 10px;
+  border: 2px black solid;
+  margin-left: -10px;
+  background-color: aqua;
+
+  &:first-child{
+    margin-left: 0;
+  }
+}

@@ -1,0 +1,19 @@
+@import '../../../../styles/colors.styles.scss';
+
+$btn-size-regular: 32px;
+
+.cstm-nav-btn {
+  background-color: transparent;
+  fill: $disabled_gray;
+  border-radius: 13px;
+  width: $btn-size-regular;
+  height: $btn-size-regular;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &.active {
+    background-color: $nav_link_bg;
+    fill: $nav_link_active;
+  }
+}

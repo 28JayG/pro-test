@@ -1,0 +1,11 @@
+@import '../../../../styles/colors.styles.scss';
+
+.content-tabbar{
+    width: 100vw;
+    margin: 25px -25px;
+    margin-bottom: 0;
+    border-bottom: 2px solid rgba($color: $disabled_gray, $alpha: 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}

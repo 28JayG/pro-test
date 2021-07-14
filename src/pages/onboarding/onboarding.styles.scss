@@ -1,0 +1,52 @@
+@import '../../styles/colors.styles.scss';
+
+$button_width: 60px;
+
+.ob-section {
+  width: 100vw;
+  max-width: 100%;
+  height: 100vh;
+  background-color: rgba($color: $dark_blue, $alpha: 0.15);
+  padding: 25px;
+
+  .ob-col {
+    display: flex;
+    max-width: 380px;
+    margin: 0 auto;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: right;
+
+    .ob-img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 26px;
+
+      img {
+        object-fit: contain;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    h4 {
+      font-size: 24px;
+      font-weight: 600;
+      color: $dark_blue;
+      margin-bottom: 26px;
+    }
+
+    .ob-go {
+      width: $button_width;
+      height: $button_width;
+
+      img {
+        object-fit: contain;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}

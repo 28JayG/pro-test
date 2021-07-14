@@ -1,0 +1,25 @@
+$btn-size-regular: 32px;
+$btn-size-lg: 48px;
+
+.sqr-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &.regular {
+    border-radius: 13px;
+    width: $btn-size-regular;
+    height: $btn-size-regular;
+  }
+
+  &.lg {
+    border-radius: 18px;
+    width: $btn-size-lg;
+    height: $btn-size-lg;
+  }
+
+  .children{
+    width: 24px;
+    height: 24px;
+  }
+}

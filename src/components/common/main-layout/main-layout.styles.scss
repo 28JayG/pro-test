@@ -1,0 +1,17 @@
+@import '../../../styles/values.scss';
+@import '../../../styles/colors.styles.scss';
+
+.ml-container {
+  width: 100vw;
+  max-width: 100%;
+  position: relative;
+  padding-top: calc(#{$status-bar-height} + 18px);
+
+  &.home {
+    background-color: $home_blue;
+  }
+
+  .ml-status-bar {
+    height: $status-bar-height;
+  }
+}

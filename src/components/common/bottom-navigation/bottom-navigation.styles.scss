@@ -1,0 +1,19 @@
+@import '../../../styles/values.scss';
+
+.bottom-nav-wrapper {
+  margin-bottom: $bottom-nav-height;
+
+  .bottom-nav {
+    width: 100%;
+    z-index: 1000;
+    height: $bottom-nav-height;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    box-shadow: -5px -2px 6px 0px rgba(0, 0, 0, 0.15);
+  }
+}
