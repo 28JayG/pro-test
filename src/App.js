@@ -11,17 +11,19 @@ import Notifications from './pages/notifications/notifications.component';
 import OnBoarding from './pages/onboarding/onboarding.component';
 import Profile from './pages/profile/profile.component';
 import StorageManagement from './pages/storage-management/storage-management.component';
+import ScrollToTop from './components/common/scroll-to-top/scroll-to-top';
 
 class App extends React.Component {
   componentDidMount() {
     const { signinUser } = this.props;
 
-    signinUser(users[4]);//dummy user from user data
+    signinUser(users[4]); //dummy user from user data
   }
 
   render() {
     return (
       <>
+        <ScrollToTop />
         <Switch>
           <Route path={InternalRoutes.HOME} exact component={OnBoarding} />
           <Route path={InternalRoutes.MY_CLOUD} component={MyCloud} />
