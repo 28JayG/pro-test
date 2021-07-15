@@ -4,9 +4,10 @@ $thumb-size: 28px;
   width: $thumb-size;
   height: $thumb-size;
   border-radius: 10px;
-  border: 2px black solid;
   margin-left: -10px;
   background-color: aqua;
+  background-size: contain;
+  background-repeat: no-repeat;
 
   &:first-child{
     margin-left: 0;

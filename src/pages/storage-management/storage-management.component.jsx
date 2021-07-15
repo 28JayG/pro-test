@@ -1,3 +1,5 @@
+import { connect } from 'react-redux';
+
 import { IconArrowNarrowLeft } from '@tabler/icons';
 import MainLayout from '../../components/common/main-layout/main-layout.component';
 import StoragePie from '../../components/storage-management/storage-pie/storage-pie.component';
@@ -5,7 +7,7 @@ import UsageDetails from '../../components/storage-management/usage-details/usea
 
 import './storage-management.styles.scss';
 
-const StorageManagement = ({ history }) => {
+const StorageManagement = ({ history, user }) => {
   return (
     <MainLayout isSubPage>
       <div className='sm-header'>
@@ -15,10 +17,18 @@ const StorageManagement = ({ history }) => {
         />
         <h4 className='sm-heading'>Storage Management</h4>
       </div>
-      <StoragePie />
-      <UsageDetails />
+      {user && (
+        <>
+          <StoragePie userFiles={user.files} />
+          <UsageDetails user={user} />
+        </>
+      )}
     </MainLayout>
   );
 };
 
-export default StorageManagement;
+const mapStateToProps = (state) => ({
+  user: state.user.currentUser,
+});
+
+export default connect(mapStateToProps)(StorageManagement);

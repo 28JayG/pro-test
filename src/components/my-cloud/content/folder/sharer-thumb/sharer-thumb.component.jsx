@@ -1,8 +1,10 @@
-import './sharer-thumb.styles.scss'
+import './sharer-thumb.styles.scss';
 
-const SharerThumb = ({sharerProfileImageUrl}) => {
-    // use img tag to show image
-    return <div className='shr-thumb' />
-}
+const SharerThumb = ({ sharer }) => (
+  <div
+    className='shr-thumb'
+    style={{ backgroundImage: `url(${sharer.imageUrl})` }}
+  />
+);
 
-export default SharerThumb
+export default SharerThumb;

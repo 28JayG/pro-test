@@ -20,6 +20,7 @@ const Profile = ({ history }) => {
       </div>
 
       <ProfileDetails />
+      
       <div className='options'>
         <OptionsTile
           title='Storage Management'

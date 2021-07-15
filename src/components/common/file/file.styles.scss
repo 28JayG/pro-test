@@ -7,6 +7,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  margin-bottom: 15px;
 
   .ft-details {
     display: flex;
@@ -17,11 +18,14 @@
     .f-name {
       font-size: 16px;
       font-weight: 500;
+      color: $black;
+      margin-bottom: 2px;
     }
 
     .f-type {
       font-size: 14px;
       font-weight: 500;
+      color: $disabled_gray;
     }
   }
 

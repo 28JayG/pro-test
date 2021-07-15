@@ -1,17 +1,23 @@
 import { useState } from 'react';
+import { folders as dbFolders } from '../../../data/folders';
+
 import SearchBar from '../../common/search-bar/search-bar.component';
-import './content.styles.scss';
 import Folder from './folder/folder.component';
 import Tab from '../../common/tab-bar/tab/tab.component';
 import Tabbar from '../../common/tab-bar/tabbar.component';
+
+import './content.styles.scss';
+import { getFolderSize } from '../../../utils/utils';
 
 const tabs = {
   files: 'files',
   folders: 'folders',
 };
 
-const Content = () => {
+const Content = ({ user }) => {
   const [activeTab, setActiveTab] = useState(tabs.folders);
+
+  const { folders } = user;
 
   const toggleTabs = (tab) => setActiveTab(tab);
 
@@ -19,7 +25,7 @@ const Content = () => {
     <section className='content-container'>
       <div className='cntnt-sticky'>
         <SearchBar />
-        
+
         <Tabbar>
           <Tab
             heading='files'
@@ -35,10 +41,16 @@ const Content = () => {
       </div>
 
       <div className='content-grid'>
-        <Folder title='Some thing' fileCount='7' totalSizeInGB='21.2' />
-        <Folder title='Some thing' fileCount='7' totalSizeInGB='21.2' />
-        <Folder title='Some thing' fileCount='7' totalSizeInGB='21.2' />
-        <Folder title='Some thing' fileCount='7' totalSizeInGB='21.2' />
+        {folders.map((folder) => {
+          return (
+            <Folder
+              title={dbFolders[folder].name}
+              fileCount={dbFolders[folder].files.length}
+              totalSize={getFolderSize(dbFolders[folder])}
+              sharers={dbFolders[folder].sharers}
+            />
+          );
+        })}
       </div>
     </section>
   );

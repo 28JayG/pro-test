@@ -3,10 +3,18 @@ import { IconArrowUp } from '@tabler/icons';
 import { AppColors } from '../../../constants/colors';
 
 import './storage-indicator.styles.scss';
+import { getTotalUsedSpace } from '../../../utils/utils';
 
-const StorageIndicator = ({ upgradeButton, increaseStorageButton, isHome }) => {
-  const usedStorageInGB = 76.7;
-  const totalStorageInGB = 100;
+const StorageIndicator = ({
+  user,
+  upgradeButton,
+  increaseStorageButton,
+  isHome,
+}) => {
+  const { cloudSpaceLimit, files } = user;
+
+  const usedStorageInGB = getTotalUsedSpace(files) / (1024 * 1024);
+  const totalStorageInGB = cloudSpaceLimit / (1024 * 1024);
 
   const leftStorageInGB = (totalStorageInGB - usedStorageInGB).toFixed(1);
 
@@ -34,7 +42,9 @@ const StorageIndicator = ({ upgradeButton, increaseStorageButton, isHome }) => {
           style={{ width: `${usedPercentage}%` }}
         />
       </div>
-      {increaseStorageButton && <button className='increase-storge'>Increase storage space</button>}
+      {increaseStorageButton && (
+        <button className='increase-storge'>Increase storage space</button>
+      )}
     </div>
   );
 };
