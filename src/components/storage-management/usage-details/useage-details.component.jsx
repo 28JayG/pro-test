@@ -33,7 +33,7 @@ const UsageDetails = ({ user }) => {
 
       <div className='files-list'>
         {files.map((fileId) => (
-          <File file={dbFiles[fileId]} key={fileId} />
+          <File showTimesUsed file={dbFiles[fileId]} key={fileId} />
         ))}
       </div>
     </section>
