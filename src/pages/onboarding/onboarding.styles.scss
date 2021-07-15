@@ -9,6 +9,24 @@ $button_width: 60px;
   background-color: rgba($color: $dark_blue, $alpha: 0.15);
   padding: 25px;
 
+  .ob-waves-top {
+    position: absolute;
+    width: 100vw;
+    max-width: 100%;
+    overflow-x: hidden;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .ob-waves-bottom {
+    position: absolute;
+    width: 30vw;
+    overflow-x: hidden;
+    bottom: 0;
+    left: 0;
+  }
+
   .ob-col {
     display: flex;
     max-width: 380px;

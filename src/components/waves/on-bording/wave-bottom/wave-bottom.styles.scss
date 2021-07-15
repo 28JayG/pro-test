@@ -1,0 +1,16 @@
+.wb-container {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 40%;
+
+  @media screen and (min-width: 768px) {
+    width: 30%;
+    bottom: -120px;
+    right: -120px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    width: 20%;
+  }
+}

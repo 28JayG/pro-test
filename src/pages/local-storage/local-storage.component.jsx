@@ -9,6 +9,8 @@ import File from '../../components/common/file/file.component'
 import './local-storage.styles.scss';
 
 const LocalStorage = ({ user }) => {
+  if(!user) return <div/>
+
   const { files } = user;
 
   return (

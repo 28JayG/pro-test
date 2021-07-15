@@ -7,12 +7,17 @@ import {
   ONBOARDING_TEXT_LINE_2,
 } from '../../constants/strings';
 
-import './onboarding.styles.scss';
 import { Link } from 'react-router-dom';
+import WaveTop from '../../components/waves/on-bording/wave-top/wave-top.component';
+
+import './onboarding.styles.scss';
+import WaveBottom from '../../components/waves/on-bording/wave-bottom/wave-bottom.component';
 
 const OnBoarding = () => {
   return (
     <section className='ob-section'>
+      <WaveTop />
+
       <div className='ob-col'>
         <div className='ob-img'>
           <img src={illustration} alt='' />
@@ -22,12 +27,13 @@ const OnBoarding = () => {
           <br />
           {ONBOARDING_TEXT_LINE_2}
         </h4>
-        <Link to= '/my-cloud'>
+        <Link to='/my-cloud'>
           <div className='ob-go'>
             <img src={go_button} alt='' />
           </div>
         </Link>
       </div>
+      <WaveBottom />
     </section>
   );
 };
