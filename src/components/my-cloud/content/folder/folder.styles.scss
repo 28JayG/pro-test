@@ -14,13 +14,20 @@ $folder_size: 150px;
   .fld-title {
     font-size: 16px;
     font-weight: 500;
+    max-width: 75%;
     color: $black;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* number of lines to show */
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
   }
 
   .fld-subtext {
     font-size: 14px;
     font-weight: 500;
-    margin-top: 2px;
+    margin-top: 3px;
     color: $disabled_gray;
   }
 
