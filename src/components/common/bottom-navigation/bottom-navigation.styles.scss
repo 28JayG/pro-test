@@ -4,7 +4,8 @@
   margin-bottom: $bottom-nav-height;
 
   .bottom-nav {
-    width: 100%;
+    width: 100vw;
+    max-width: 100%;
     z-index: 998;
     height: $bottom-nav-height;
     position: fixed;

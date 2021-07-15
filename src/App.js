@@ -1,6 +1,7 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { InternalRoutes } from './constants/routes';
+
 import LocalStorage from './pages/local-storage/local-storage.component';
 import MyCloud from './pages/my-cloud/my-cloud.component';
 import Notifications from './pages/notifications/notifications.component';
