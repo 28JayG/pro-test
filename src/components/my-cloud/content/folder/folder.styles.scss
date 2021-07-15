@@ -14,12 +14,13 @@ $folder_size: 150px;
   .fld-title {
     font-size: 16px;
     font-weight: 500;
-    color: #242833;
+    color: $black;
   }
 
   .fld-subtext {
     font-size: 14px;
     font-weight: 500;
+    margin-top: 2px;
     color: $disabled_gray;
   }
 

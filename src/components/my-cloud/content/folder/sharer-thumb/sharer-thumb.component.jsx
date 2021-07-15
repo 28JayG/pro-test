@@ -1,10 +1,12 @@
 import './sharer-thumb.styles.scss';
 
-const SharerThumb = ({ sharer }) => (
+const SharerThumb = ({ sharer, showExtraCount, excessCount }) => (
   <div
-    className='shr-thumb'
-    style={{ backgroundImage: `url(${sharer.imageUrl})` }}
-  />
+    className={`shr-thumb ${showExtraCount ? 'extra' : ''}`}
+    style={{ backgroundImage: `url(${sharer ? sharer.imageUrl : ''})` }}
+  >
+    {showExtraCount && `+${excessCount}`}
+  </div>
 );
 
 export default SharerThumb;

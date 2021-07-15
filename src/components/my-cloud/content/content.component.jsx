@@ -41,13 +41,14 @@ const Content = ({ user }) => {
       </div>
 
       <div className='content-grid'>
-        {folders.map((folder) => {
+        {folders.map((folderId) => {
           return (
             <Folder
-              title={dbFolders[folder].name}
-              fileCount={dbFolders[folder].files.length}
-              totalSize={getFolderSize(dbFolders[folder])}
-              sharers={dbFolders[folder].sharers}
+              key={folderId}
+              title={dbFolders[folderId].name}
+              fileCount={dbFolders[folderId].files.length}
+              totalSize={getFolderSize(dbFolders[folderId])}
+              sharers={dbFolders[folderId].sharers}
             />
           );
         })}

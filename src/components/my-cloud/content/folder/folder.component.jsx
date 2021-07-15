@@ -22,9 +22,12 @@ const Folder = ({ title, fileCount, totalSize, sharers }) => {
       </div>
 
       <div className='sharers-row'>
-        {sharersList.map((sharer) => (
-          <SharerThumb sharer={sharer} />
+        {sharersList.slice(0, 3).map((sharer) => (
+          <SharerThumb sharer={sharer} key={sharer.id} />
         ))}
+        {sharersList.length > 3 && (
+          <SharerThumb showExtraCount excessCount={sharersList.length - 3} />
+        )}
       </div>
     </div>
   );
