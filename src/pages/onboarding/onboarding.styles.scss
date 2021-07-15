@@ -31,10 +31,10 @@ $button_width: 60px;
     display: flex;
     max-width: 380px;
     margin: 0 auto;
-    margin-top: 30px;
+    padding-bottom: 20px;
     height: 100%;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: flex-end;
     text-align: right;
 
@@ -43,6 +43,14 @@ $button_width: 60px;
       height: auto;
       max-height: 400px;
       margin-bottom: 26px;
+
+      @media screen and (max-height: 700px) {
+        max-height: 290px;
+      }
+
+      @media screen and (max-width: 360px) {
+        max-height: 300px;
+      }
 
       img {
         object-fit: contain;
@@ -56,7 +64,7 @@ $button_width: 60px;
       font-size: 24px;
       font-weight: 600;
       color: $dark_blue;
-      margin-bottom: 26px;
+      margin-bottom: 20px;
     }
 
     .ob-go {
