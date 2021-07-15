@@ -21,7 +21,9 @@ const LocalStorage = ({ user }) => {
       <div className='ls-body'>
         <SearchBar />
         <FileTypeFilter />
-        {files.map(file => <File file={dbFiles[file]} />)}
+        {files.map((fileId) => (
+          <File key={fileId} file={dbFiles[fileId]} />
+        ))}
       </div>
     </MainLayout>
   );

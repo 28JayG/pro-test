@@ -32,8 +32,8 @@ const UsageDetails = ({ user }) => {
       </Tabbar>
 
       <div className='files-list'>
-        {files.map((file) => (
-          <File file={dbFiles[file]} />
+        {files.map((fileId) => (
+          <File file={dbFiles[fileId]} key={fileId} />
         ))}
       </div>
     </section>
